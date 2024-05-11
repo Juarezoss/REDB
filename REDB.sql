@@ -29,13 +29,16 @@ create TABLE buildings(
 	picture VARCHAR(200) not NULL DEFAULT "generic.jpg",
 	PIC_CAPTION VARCHAR(200) NOT NULL,
 	DESCRIPTION VARCHAR (200),
+	is_active tinyint (1) NOT NULL DEFAULT 1,
 	admin_id  INT(11) unsigned not NULL,
 	CREATE_AT TIMESTAMP,
 	
 	FOREIGN key (admin_id) REFERENCES admins(id)
 );
 
-DESCRIBE buildings
+DESCRIBE admins;
+DESCRIBE buildings;
+
 DROP TABLE admins;
 
 drop TABLE buildings;
